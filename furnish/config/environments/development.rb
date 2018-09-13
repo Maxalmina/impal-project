@@ -14,12 +14,12 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join('tmp', 'caching-dev.txt').exist?
+  if Rails.root.join("tmp", "caching-dev.txt").exist?
     config.action_controller.perform_caching = true
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+      "Cache-Control" => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -47,7 +47,7 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true
+  config.assets.debug = false
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
@@ -58,4 +58,7 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # Whitelist vagrant ip for web console
+  config.web_console.whitelisted_ips = '10.0.2.2'
 end

@@ -1,0 +1,8 @@
+@import "base/globals.scss";
+
+@import "styles/*";
+
+.logo-font {
+  font-family: $logo-font;
+  font-weight: bold;
+}
