@@ -1,2 +1,2 @@
-module LandingCustomerHelper
+module LandingPagesHelper
 end

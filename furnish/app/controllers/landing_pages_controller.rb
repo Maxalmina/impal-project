@@ -1,4 +1,4 @@
-class LandingCustomerController < ApplicationController
+class LandingPagesController < ApplicationController
     def landing
     end
 end
