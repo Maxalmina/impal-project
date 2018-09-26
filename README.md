@@ -1,7 +1,3 @@
-# Impal Project
-
-Project of Software Implementation and Testing Course at Telkom University
-
 # furnish.
 
 Project of Software Implementation and Testing Course at Telkom University
