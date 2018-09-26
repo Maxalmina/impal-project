@@ -1,0 +1,2 @@
+class Produsen < User
+end

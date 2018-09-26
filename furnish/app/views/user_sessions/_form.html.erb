@@ -1,13 +1,24 @@
-<%= form_with(local: true) do |form| %>
+<%= form_with(model: user_session, url: signin_post_path, local: true) do |form| %>
   <div class="input-field">
+    <i class="material-icons prefix">person_outline</i>
     <%= form.label :username %>
     <%= form.text_field :username %>
+    <% if user_session.errors[:username].any? %>
+      <small class="red-text"><%= user_session.errors.full_messages_for(:username).first %></small>
+    <% end %>
   </div>
+
   <div class="input-field">
+  <i class="material-icons prefix">lock_outline</i>
     <%= form.label :password %>
     <%= form.password_field :password %>
+    <% if user_session.errors[:password].any? %>
+      <small class="red-text"><%= user_session.errors.full_messages_for(:password).first %></small>
+    <% end %>
   </div>
+
   <div class="actions">
-    <%= form.button "Login", type: :submit, class: "btn waves-effect waves-light blue darken-2 white-text"  %>
+    <%= form.button "Signin", type: :submit, class: "btn waves-effect waves-light light-blue darken-4 white-text"  %>
   </div>
+  <%= link_to "Register Here", static_path, class: "waves-effect waves-light btn-small white light-blue-text text-darken-4", id:"static-page" %>
 <% end %>

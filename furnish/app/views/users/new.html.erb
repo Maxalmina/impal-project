@@ -1,0 +1,18 @@
+<% content_for :title do %>
+  Register
+<% end %>
+
+<div class="register-content">
+  <div class="register-container card hoverable">
+    <div class="register-heading">
+      <h2 class="register-heading-logo light-blue-text text-darken-4">
+        <i class="fa fa-home"></i>furnish.
+      </h2>
+      <h4 class="register-heading-title">sign up as <%= @role %></h4>
+      
+    </div>
+    <div class="register-form">
+      <%= render partial: 'form', locals: { user: @user, role: @role } %>
+    </div>
+  </div>
+</div>
