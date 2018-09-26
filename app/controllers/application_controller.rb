@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    helper_method :current_user_session, :current_user, :logged_in?
+  helper_method :current_user_session, :current_user, :logged_in?
   before_action :require_login
 
   private
@@ -25,31 +25,31 @@ class ApplicationController < ActionController::Base
     end
 
     def require_login
-      redirect_to login_path unless logged_in?
+      redirect_to signin_path unless logged_in?
     end
 
     def require_logout
-      redirect_to dashboard_path if logged_in?
+      redirect_to static_path if logged_in?
     end
 
     def require_customer
       unless current_user.customer?
         flash[:notice] = "Unauthorized access."
-        redirect_to dashboard_path
+        redirect_to static_path
       end
     end
 
     def require_produsen
       unless current_user.produsen?
         flash[:notice] = "Unauthorized access."
-        redirect_to dashboard_path
+        redirect_to static_path
       end
     end
 
     def require_specific(user)
       unless current_user == user
         flash[:notice] = "Unauthorized access."
-        redirect_to dashboard_path
+        redirect_to static_path
       end
     end
 end
