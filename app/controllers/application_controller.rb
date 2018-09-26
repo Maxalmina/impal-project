@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
       return @current_user_session if defined? @current_user_session
 
       if ENV["RAILS_ENV"] == "test"
-        User.create(username: "tester", email: "tester@mail.org", role: :admin, password: "secretive", password_confirmation: "secretive")
+        User.create(username: "tester", email: "tester@mail.org", role: :customer, password: "secretive", password_confirmation: "secretive")
         @current_user_session = UserSession.create(username: "tester", password: "secret")
       end
 

@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(user_session_params)
 
     if @user_session.save
-      redirect_to dashboard_path
+      redirect_to static_path
     else
       render :new
     end
@@ -18,7 +18,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
     current_user_session.destroy
-    redirect_to login_path
+    redirect_to static_path
   end
 
   private
