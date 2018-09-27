@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_035224) do
+ActiveRecord::Schema.define(version: 2018_09_27_043035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(version: 2018_09_27_035224) do
 
   create_table "report_details", force: :cascade do |t|
     t.string "description"
-    t.bigint "transaction_id"
-    t.bigint "report_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "report_id"
+    t.bigint "transaction_id"
     t.index ["report_id"], name: "index_report_details_on_report_id"
     t.index ["transaction_id"], name: "index_report_details_on_transaction_id"
   end
@@ -43,12 +43,12 @@ ActiveRecord::Schema.define(version: 2018_09_27_035224) do
   end
 
   create_table "transaction_details", force: :cascade do |t|
-    t.bigint "furniture_id"
     t.integer "quantity"
     t.decimal "totalPrice"
-    t.bigint "transaction_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "furniture_id"
+    t.bigint "transaction_id"
     t.index ["furniture_id"], name: "index_transaction_details_on_furniture_id"
     t.index ["transaction_id"], name: "index_transaction_details_on_transaction_id"
   end
