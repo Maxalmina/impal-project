@@ -6517,3 +6517,365 @@ Processing by LandingPagesController#index as HTML
 Completed 200 OK in 1178ms (Views: 1097.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-07 18:34:56 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by LandingPagesController#index as HTML
+  Rendering landing_pages/index.html.erb within layouts/application
+  Rendered landing_pages/_header.html.erb (38.8ms)
+  Rendered landing_pages/index.html.erb within layouts/application (44.4ms)
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 12.7ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /home/abduh_salam/Documents/impal-project/app/assets/config
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts
+  /home/abduh_salam/Documents/impal-project/app/assets/images
+  /home/abduh_salam/Documents/impal-project/app/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/app/assets/stylesheets
+  /home/abduh_salam/Documents/impal-project/vendor/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/vendor/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.1/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/node_modules
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts):
+    17:     <!-- Google Fonts: Titillium Web -->
+    18:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Titillium+Web:400,700" %>
+    19: 
+    20:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    21:     <%= yield :stylesheets %>
+    22:   </head>
+    23:   <body>
+  
+app/assets/stylesheets/styles/cart.scss:1
+app/assets/stylesheets/styles:1
+app/assets/stylesheets/main.scss:3
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3375063482013606656_47007649595340'
+Started GET "/" for 127.0.0.1 at 2018-10-07 18:34:59 +0700
+Processing by LandingPagesController#index as HTML
+  Rendering landing_pages/index.html.erb within layouts/application
+  Rendered landing_pages/_header.html.erb (2.3ms)
+  Rendered landing_pages/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /home/abduh_salam/Documents/impal-project/app/assets/config
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts
+  /home/abduh_salam/Documents/impal-project/app/assets/images
+  /home/abduh_salam/Documents/impal-project/app/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/app/assets/stylesheets
+  /home/abduh_salam/Documents/impal-project/vendor/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/vendor/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.1/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/node_modules
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts):
+    17:     <!-- Google Fonts: Titillium Web -->
+    18:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Titillium+Web:400,700" %>
+    19: 
+    20:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    21:     <%= yield :stylesheets %>
+    22:   </head>
+    23:   <body>
+  
+app/assets/stylesheets/styles/cart.scss:1
+app/assets/stylesheets/styles:1
+app/assets/stylesheets/main.scss:3
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3375063482013606656_70117455089400'
+Started GET "/" for 127.0.0.1 at 2018-10-07 18:35:00 +0700
+Processing by LandingPagesController#index as HTML
+  Rendering landing_pages/index.html.erb within layouts/application
+  Rendered landing_pages/_header.html.erb (1.9ms)
+  Rendered landing_pages/index.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /home/abduh_salam/Documents/impal-project/app/assets/config
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts
+  /home/abduh_salam/Documents/impal-project/app/assets/images
+  /home/abduh_salam/Documents/impal-project/app/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/app/assets/stylesheets
+  /home/abduh_salam/Documents/impal-project/vendor/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/vendor/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.1/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/node_modules
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts):
+    17:     <!-- Google Fonts: Titillium Web -->
+    18:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Titillium+Web:400,700" %>
+    19: 
+    20:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    21:     <%= yield :stylesheets %>
+    22:   </head>
+    23:   <body>
+  
+app/assets/stylesheets/styles/cart.scss:1
+app/assets/stylesheets/styles:1
+app/assets/stylesheets/main.scss:3
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3375063482013606656_70117536391600'
+Started GET "/" for 127.0.0.1 at 2018-10-07 18:35:01 +0700
+Processing by LandingPagesController#index as HTML
+  Rendering landing_pages/index.html.erb within layouts/application
+  Rendered landing_pages/_header.html.erb (2.3ms)
+  Rendered landing_pages/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /home/abduh_salam/Documents/impal-project/app/assets/config
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts
+  /home/abduh_salam/Documents/impal-project/app/assets/images
+  /home/abduh_salam/Documents/impal-project/app/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/app/assets/stylesheets
+  /home/abduh_salam/Documents/impal-project/vendor/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/vendor/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.1/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/node_modules
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts):
+    17:     <!-- Google Fonts: Titillium Web -->
+    18:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Titillium+Web:400,700" %>
+    19: 
+    20:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    21:     <%= yield :stylesheets %>
+    22:   </head>
+    23:   <body>
+  
+app/assets/stylesheets/styles/cart.scss:1
+app/assets/stylesheets/styles:1
+app/assets/stylesheets/main.scss:3
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3375063482013606656_70117538582020'
+Started GET "/" for 127.0.0.1 at 2018-10-07 18:35:01 +0700
+Processing by LandingPagesController#index as HTML
+  Rendering landing_pages/index.html.erb within layouts/application
+  Rendered landing_pages/_header.html.erb (1.9ms)
+  Rendered landing_pages/index.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /home/abduh_salam/Documents/impal-project/app/assets/config
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts
+  /home/abduh_salam/Documents/impal-project/app/assets/images
+  /home/abduh_salam/Documents/impal-project/app/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/app/assets/stylesheets
+  /home/abduh_salam/Documents/impal-project/vendor/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/vendor/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.1/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/node_modules
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts):
+    17:     <!-- Google Fonts: Titillium Web -->
+    18:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Titillium+Web:400,700" %>
+    19: 
+    20:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    21:     <%= yield :stylesheets %>
+    22:   </head>
+    23:   <body>
+  
+app/assets/stylesheets/styles/cart.scss:1
+app/assets/stylesheets/styles:1
+app/assets/stylesheets/main.scss:3
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3375063482013606656_70117540477420'
+Started GET "/" for 127.0.0.1 at 2018-10-07 18:35:02 +0700
+Processing by LandingPagesController#index as HTML
+  Rendering landing_pages/index.html.erb within layouts/application
+  Rendered landing_pages/_header.html.erb (2.8ms)
+  Rendered landing_pages/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /home/abduh_salam/Documents/impal-project/app/assets/config
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts
+  /home/abduh_salam/Documents/impal-project/app/assets/images
+  /home/abduh_salam/Documents/impal-project/app/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/app/assets/stylesheets
+  /home/abduh_salam/Documents/impal-project/vendor/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/vendor/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.1/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/node_modules
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts):
+    17:     <!-- Google Fonts: Titillium Web -->
+    18:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Titillium+Web:400,700" %>
+    19: 
+    20:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    21:     <%= yield :stylesheets %>
+    22:   </head>
+    23:   <body>
+  
+app/assets/stylesheets/styles/cart.scss:1
+app/assets/stylesheets/styles:1
+app/assets/stylesheets/main.scss:3
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3375063482013606656_70117542068180'
+Started GET "/" for 127.0.0.1 at 2018-10-07 18:35:02 +0700
+Processing by LandingPagesController#index as HTML
+  Rendering landing_pages/index.html.erb within layouts/application
+  Rendered landing_pages/_header.html.erb (2.7ms)
+  Rendered landing_pages/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /home/abduh_salam/Documents/impal-project/app/assets/config
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts
+  /home/abduh_salam/Documents/impal-project/app/assets/images
+  /home/abduh_salam/Documents/impal-project/app/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/app/assets/stylesheets
+  /home/abduh_salam/Documents/impal-project/vendor/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/vendor/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.1/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/node_modules
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts):
+    17:     <!-- Google Fonts: Titillium Web -->
+    18:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Titillium+Web:400,700" %>
+    19: 
+    20:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    21:     <%= yield :stylesheets %>
+    22:   </head>
+    23:   <body>
+  
+app/assets/stylesheets/styles/cart.scss:1
+app/assets/stylesheets/styles:1
+app/assets/stylesheets/main.scss:3
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3375063482013606656_70117455529800'
+Started GET "/" for 127.0.0.1 at 2018-10-07 18:35:03 +0700
+Processing by LandingPagesController#index as HTML
+  Rendering landing_pages/index.html.erb within layouts/application
+  Rendered landing_pages/_header.html.erb (2.9ms)
+  Rendered landing_pages/index.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /home/abduh_salam/Documents/impal-project/app/assets/config
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts
+  /home/abduh_salam/Documents/impal-project/app/assets/images
+  /home/abduh_salam/Documents/impal-project/app/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/app/assets/stylesheets
+  /home/abduh_salam/Documents/impal-project/vendor/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/vendor/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.1/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/node_modules
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts):
+    17:     <!-- Google Fonts: Titillium Web -->
+    18:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Titillium+Web:400,700" %>
+    19: 
+    20:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    21:     <%= yield :stylesheets %>
+    22:   </head>
+    23:   <body>
+  
+app/assets/stylesheets/styles/cart.scss:1
+app/assets/stylesheets/styles:1
+app/assets/stylesheets/main.scss:3
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3375063482013606656_70117456719500'
+Started GET "/" for 127.0.0.1 at 2018-10-07 18:35:03 +0700
+Processing by LandingPagesController#index as HTML
+  Rendering landing_pages/index.html.erb within layouts/application
+  Rendered landing_pages/_header.html.erb (2.2ms)
+  Rendered landing_pages/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /home/abduh_salam/Documents/impal-project/app/assets/config
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts
+  /home/abduh_salam/Documents/impal-project/app/assets/images
+  /home/abduh_salam/Documents/impal-project/app/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/app/assets/stylesheets
+  /home/abduh_salam/Documents/impal-project/vendor/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/vendor/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.1/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/node_modules
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts):
+    17:     <!-- Google Fonts: Titillium Web -->
+    18:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Titillium+Web:400,700" %>
+    19: 
+    20:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    21:     <%= yield :stylesheets %>
+    22:   </head>
+    23:   <body>
+  
+app/assets/stylesheets/styles/cart.scss:1
+app/assets/stylesheets/styles:1
+app/assets/stylesheets/main.scss:3
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3375063482013606656_70117526353660'
+Started GET "/" for 127.0.0.1 at 2018-10-07 18:35:03 +0700
+Processing by LandingPagesController#index as HTML
+  Rendering landing_pages/index.html.erb within layouts/application
+  Rendered landing_pages/_header.html.erb (3.4ms)
+  Rendered landing_pages/index.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /home/abduh_salam/Documents/impal-project/app/assets/config
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts
+  /home/abduh_salam/Documents/impal-project/app/assets/images
+  /home/abduh_salam/Documents/impal-project/app/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/app/assets/stylesheets
+  /home/abduh_salam/Documents/impal-project/vendor/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/vendor/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.1/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.1/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/abduh_salam/Documents/impal-project/node_modules
+  /home/abduh_salam/Documents/impal-project/app/assets/fonts):
+    17:     <!-- Google Fonts: Titillium Web -->
+    18:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Titillium+Web:400,700" %>
+    19: 
+    20:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    21:     <%= yield :stylesheets %>
+    22:   </head>
+    23:   <body>
+  
+app/assets/stylesheets/styles/cart.scss:1
+app/assets/stylesheets/styles:1
+app/assets/stylesheets/main.scss:3
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3375063482013606656_70117527534640'
