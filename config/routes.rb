@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get "/description", to: "product#description"
+  get "/checkout", to: "checkout#checkout"
+
   get "/register/:role", to: "users#new", as: "register"
   post "/register/:role", to: "users#create", as: "register_post"
 
