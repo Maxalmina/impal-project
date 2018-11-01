@@ -57,7 +57,7 @@ class UsersController < ApplicationController
 
         def set_user
             @user = User.find(params[:id])
-            require_produsen if @user != current_user
+            require_admin if @user != current_user
         end
 
         def user_params
