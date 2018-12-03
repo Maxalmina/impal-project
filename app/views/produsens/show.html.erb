@@ -1,0 +1,27 @@
+<% content_for :page_title do %>
+  Furnitures
+<% end %>
+
+<% content_for :page_header do %>
+  <%= render 'pages/header' %>
+<% end %>
+
+<% content_for :page_content do %>
+    <section id="content">
+        <div class="container">
+            <div class="card-panel">
+                <div class="row">
+                    <div class="col s12">
+                        <h4><%= @produsen.name %></h4>
+                        <p><%= @produsen.description %></p>
+                    </div>
+                </div>
+                <div class="row">
+                </div>
+            </div>
+            <%= render partial: 'transaksis/form', locals: { transaksi: Transaksi.new, produsen: @produsen } %>
+        </div>
+    </section>
+<% end %>
+
+<%= render template: "layouts/pages" %>

@@ -1,0 +1,41 @@
+<header id="header" class="page-topbar">
+    <!-- start header nav-->
+    <div class="navbar-fixed">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">My Profile</a></li>
+            <li><a href="#!">History</a></li>
+            <li class="divider"></li>
+        </ul>
+        <nav class="navbar-color grey darken-4">
+            <div class="nav-wrapper">
+                <a href="<%= dashboard_path %>" class="brand-logo center">furnish.</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">reorder</i></a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <% if logged_in? %>
+                        <% if current_user.admin?%>
+                            <li><a href="<%= transaksis_path %>">All Transactions</li>
+                        <% elsif current_user.customer? %>
+                            <li><a href="<%= transaksis_path %>">My Cart</li>
+                        <% end %>
+                    <% end %>
+                </ul>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <% if logged_in?%>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><%= current_user.username %></a></li>
+                    <li><%= link_to "SIGN OUT", signout_path, class: "btn waves-effect waves-blue white light-blue-text text-darken-4", id: "signout", method: "delete" %></li>
+                <% else %>
+                    <li>
+                        <%= link_to "SIGN IN", sign_path, class: "btn waves-effect waves-blue white light-blue-text text-darken-4", id: "signin" %>
+                    </li>
+                <% end %>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="https://www.google.com/">Shop</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul> 
+    </div>
+    <!-- end header nav-->
+</header>

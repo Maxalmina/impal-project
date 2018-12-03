@@ -1,5 +1,4 @@
 class UserSessionsController < ApplicationController
-  skip_before_action :require_login, only: [:new, :create]
   before_action :require_logout, only: [:new, :create]
   
   def new
@@ -10,7 +9,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(user_session_params)
 
     if @user_session.save
-      redirect_to static_path
+      redirect_to dashboard_path
     else
       render :new
     end
@@ -18,7 +17,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
     current_user_session.destroy
-    redirect_to static_path
+    redirect_to dashboard_path
   end
 
   private

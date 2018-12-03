@@ -1,0 +1,79 @@
+<% content_for :page_title do %>
+  transaksis
+<% end %>
+
+<% content_for :page_header do %>
+  <%= render 'pages/header' %>
+<% end %>
+
+<% content_for :page_content do %>
+    <section id="content">
+        <!--start container-->
+        <div class="container">
+            <% if current_user.customer? %>
+                <h3>MY TRANSACTIONS</h3>
+            <% elsif current_user.admin? %>
+                <h3>TRANSACTIONS</h3>
+            <% end %>
+
+            <% if current_user.admin? %>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Customer</th>
+                        <th>Produsen</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    <% @transaksis.each do |transaksi| %>
+                        <% if current_user.admin? %>
+                            <tr>
+                                <td><%= transaksi.created_at.strftime("%d %b %Y, %H:%M") %></td>
+                                <td><%= transaksi.user && transaksi.user.username %></td>
+                                <td><%= transaksi.produsen.name %></td>
+                                <td><%= transaksi.status %></td>
+                                <td>
+                                <%= link_to(transaksi, class: "white blue-text btn-small") do %>
+                                    <i class="fa fa-info"></i>
+                                <% end %>
+                                <% if current_user.admin? %>
+                                    <%= link_to(transaksi, method: :delete, data: { confirm: 'Are you sure?' }, class: "white red-text btn-small") do %>
+                                        <i class="fa fa-times"></i>
+                                    <% end %>
+                                <% end %>
+                                </td>
+                            </tr>
+                        <% end %>
+                    <% end %>
+                </table>
+            <% elsif current_user.customer? %>
+                <% @transaksis.each do |transaksi| %>
+                    <% if transaksi.owned?(current_user) %>
+                        <div class="card">
+                            <div class="card-content">
+                                <small><%= transaksi.created_at.strftime("%d %b %Y, %H:%M") %></small>
+                                <h4><%= transaksi.produsen.name %></h4>
+                                <p><%= transaksi.produsen.description %></p>
+                                <% if transaksi.status == "cart" %>
+                                    <span class="btn-small white grey-text" style="position: absolute; right: 24px; top: 24px;">CART</span>
+                                <% elsif transaksi.status == "pending" %>
+                                    <span class="btn-small white amber-text text-darken-2" style="position: absolute; right: 24px; top: 24px;">AWAITING transaksi</span>
+                                <% elsif transaksi.status == "ordered" %>
+                                    <span class="btn-small amber white-text darken-2" style="position: absolute; right: 24px; top: 24px;">ORDERED</span>
+                                <% elsif transaksi.status == "completed" %>
+                                    <span class="btn-small green white-text" style="position: absolute; right: 24px; top: 24px;">COMPLETED</span>
+                                <% end %>
+                            </div>
+                            <div class="card-action">
+                                <%= link_to 'Details', transaksi, class: "blue-text" %>
+                            </div>
+                        </div>
+                    <% end %>
+                <% end %>
+            <% end %>
+        </div>
+        <!--end container-->
+    </section>
+<% end %>
+
+<%= render template: "layouts/pages" %>

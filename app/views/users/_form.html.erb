@@ -1,4 +1,4 @@
-<%= form_with(model: user, url: register_post_path(role), local: true) do |f| %>
+<%= form_with(model: user, url: register_post_path(), local: true) do |f| %>
   <div class="input-field">
     <%= f.label :username %>
     <%= f.text_field :username %>
@@ -16,9 +16,6 @@
   </div>
 
   <div class="input-field">
-    <%= f.hidden_field :role, value: role %>
-  </div>
-  <div class="input-field">
     <%= f.label :password %>
     <%= f.password_field :password %>
     <% if user.errors[:password].any? %>
@@ -31,6 +28,22 @@
     <%= f.password_field :password_confirmation %>
     <% if user.errors[:password_confirmation].any? %>
       <small class="red-text"><%= user.errors.full_messages_for(:password_confirmation).first %></small>
+    <% end %>
+  </div>
+
+  <div class="input-field">
+    <%= f.label :alamat %>
+    <%= f.text_field :alamat %>
+    <% if user.errors[:alamat].any? %>
+      <small class="red-text"><%= user.errors.full_messages_for(:alamat).first %></small>
+    <% end %>
+  </div>
+
+  <div class="input-field">
+    <%= f.label :telp %>
+    <%= f.text_field :telp %>
+    <% if user.errors[:telp].any? %>
+      <small class="red-text"><%= user.errors.full_messages_for(:alamat).first %></small>
     <% end %>
   </div>
 

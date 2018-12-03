@@ -1,3 +1,3 @@
-class Produsen < User
+class Produsen < ApplicationRecord
     has_many :furnitures
 end

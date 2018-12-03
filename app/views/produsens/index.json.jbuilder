@@ -1,0 +1,1 @@
+json.array! @produsens, partial: 'produsens/produsen', as: :produsen

@@ -1,0 +1,57 @@
+@import "../base/globals.scss";
+
+.landing {
+  &-content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:
+      linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+      ),
+      url('https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+  }
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  &-heading {
+    font-family: $logo-font;
+    font-weight: bold;
+    margin: 0;
+    @media only screen and (max-width: 360px) {
+      font-size: 3.5rem;
+    }
+    .fa {
+      margin-right: 1.5rem;
+    }
+  }
+  &-links-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media only screen and (max-width: 450px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    small {
+      justify-self: center;
+    }
+    small, #login-admin, #login-produsen {
+      grid-column: 1 / 3;
+      @media only screen and (max-width: 450px) {
+        grid-column: 1 / 2;
+      }
+    }
+    gap: 1rem;
+    .carousel .carousel-item img{
+      width: 400px;
+      height: 300px !important;
+    } 
+  }
+}
