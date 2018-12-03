@@ -21,7 +21,7 @@ RSpec.describe User, type: :model do
     end
 
     it "should have attribute password" do
-      expect(user).to respond_to(:telp)password
+      expect(user).to respond_to(:telp)
     end
   end
 
