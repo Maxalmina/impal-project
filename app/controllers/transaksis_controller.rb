@@ -36,8 +36,8 @@ class TransaksisController < ApplicationController
         user = User.find(transaksi_update_params[:user_id])
         require_specific(user) if !@transaksi.cart?
     
-        updated = @otransaksi.update(transaksi_update_params)
-        @transaksis.update_status if updated && update_status? && update_status_allowed?
+        updated = @transaksi.update(transaksi_update_params)
+        @transaksi.update_status if updated && update_status? && update_status_allowed?
     
         respond_to do |format|
           if updated

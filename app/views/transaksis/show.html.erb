@@ -44,13 +44,21 @@
                 <%= @transaksi.total_price %>
             </p>
             <%= link_to 'Back', transaksis_path, class: "btn white red-text text-darken-2" %>
-            <% if @transaksi.status == "cart" && current_user.customer? %>
-                <%= link_to "PAY NOW", signin_path, class: "btn waves-effect waves-blue white light-blue-text text-darken-4", id: "signin" %>
+            <% if current_user.customer? %>
+                <% if @transaksi.status == "cart" && current_user.customer? %>
+                    <%= form_with(model: @transaksi, local: true, method: 'patch') do |form| %>
+                        <%= form.hidden_field :user_id, value: current_user.id %>
+                        <%= form.hidden_field :update_status, value: true %>
+                        <div class="actions">
+                            <%= form.button "PAY NOW", type: :submit, class: "btn green white-text text-darken-2", style: "margin-bottom: 1rem" %>
+                        </div>
+                    <% end %>
+                <% end %>
             <% end %>
 
             <% if current_user.admin? %>
-                <%= form_with(model: @transaction, local: true, method: 'patch') do |form| %>
-                    <%= form.hidden_field :user_id, value: current_user.id %>
+                <%= form_with(model: @transaksi, local: true, method: 'patch') do |form| %>
+                    <%= form.hidden_field :user_id, value: @transaksi.user.id %>
                     <%= form.hidden_field :update_status, value: true %>
 
                     <div class="actions">
