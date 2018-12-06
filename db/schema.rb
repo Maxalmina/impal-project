@@ -10,56 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_043035) do
+ActiveRecord::Schema.define(version: 2018_11_28_001251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "furnitures", force: :cascade do |t|
     t.string "name"
-    t.decimal "price"
     t.string "description"
+    t.decimal "price"
+    t.string "image"
+    t.bigint "produsen_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "produsen_id"
     t.index ["produsen_id"], name: "index_furnitures_on_produsen_id"
   end
 
-  create_table "report_details", force: :cascade do |t|
+  create_table "produsens", force: :cascade do |t|
+    t.string "name"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "report_id"
-    t.bigint "transaction_id"
-    t.index ["report_id"], name: "index_report_details_on_report_id"
-    t.index ["transaction_id"], name: "index_report_details_on_transaction_id"
-  end
-
-  create_table "reports", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "admin_id"
-    t.index ["admin_id"], name: "index_reports_on_admin_id"
   end
 
   create_table "transaction_details", force: :cascade do |t|
     t.integer "quantity"
-    t.decimal "totalPrice"
+    t.bigint "furniture_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "furniture_id"
-    t.bigint "transaction_id"
+    t.bigint "transaksi_id"
     t.index ["furniture_id"], name: "index_transaction_details_on_furniture_id"
-    t.index ["transaction_id"], name: "index_transaction_details_on_transaction_id"
+    t.index ["transaksi_id"], name: "index_transaction_details_on_transaksi_id"
   end
 
-  create_table "transactions", force: :cascade do |t|
-    t.decimal "totalPayment"
+  create_table "transaksis", force: :cascade do |t|
+    t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "customer_id"
-    t.integer "status", default: 0
-    t.index ["customer_id"], name: "index_transactions_on_customer_id"
+    t.bigint "produsen_id"
+    t.bigint "user_id"
+    t.index ["produsen_id"], name: "index_transaksis_on_produsen_id"
+    t.index ["user_id"], name: "index_transaksis_on_user_id"
   end
 
   create_table "user_sessions", force: :cascade do |t|
@@ -77,14 +68,10 @@ ActiveRecord::Schema.define(version: 2018_09_27_043035) do
     t.datetime "updated_at", null: false
     t.string "alamat"
     t.string "telp"
-    t.integer "role", default: 0
   end
 
-  add_foreign_key "furnitures", "users", column: "produsen_id"
-  add_foreign_key "report_details", "reports"
-  add_foreign_key "report_details", "transactions"
-  add_foreign_key "reports", "users", column: "admin_id"
+  add_foreign_key "furnitures", "produsens"
   add_foreign_key "transaction_details", "furnitures"
-  add_foreign_key "transaction_details", "transactions"
-  add_foreign_key "transactions", "users", column: "customer_id"
+  add_foreign_key "transaction_details", "transaksis"
+  add_foreign_key "transaksis", "produsens"
 end

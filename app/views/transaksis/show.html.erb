@@ -1,0 +1,65 @@
+<% content_for :page_title do %>
+  Transactions
+<% end %>
+
+<% content_for :page_header do %>
+  <%= render 'pages/header' %>
+<% end %>
+
+<% content_for :page_content do %>
+    <section id="content">
+        <div class="container">
+            <p id="notice"><%= notice %></p>
+
+            <p>
+                <strong>Produsen:</strong>
+                <%= @transaksi.produsen.name %>
+            </p>
+
+            <p>
+                <strong>Customer:</strong>
+                <%= @transaksi.user.username %>
+            </p>
+
+            <p class="capitalized">
+                <strong>Status:</strong>
+                <%= @transaksi.status %>
+            </p>
+            <table>
+                <tr>
+                    <th>Furniture</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+                <% @transaksi.transaction_details.each do |td| %>
+                    <tr>
+                        <td><%= td.furniture.name %></td>
+                        <td><%= td.furniture.price %></td>
+                        <td><%= td.quantity %></td>
+                    </tr>
+                <% end %>
+            </table>
+            <p>
+                <strong>Total price:</strong>
+                <%= @transaksi.total_price %>
+            </p>
+            <%= link_to 'Back', transaksis_path, class: "btn white red-text text-darken-2" %>
+            <% if @transaksi.status == "cart" && current_user.customer? %>
+                <%= link_to "PAY NOW", signin_path, class: "btn waves-effect waves-blue white light-blue-text text-darken-4", id: "signin" %>
+            <% end %>
+
+            <% if current_user.admin? %>
+                <%= form_with(model: @transaction, local: true, method: 'patch') do |form| %>
+                    <%= form.hidden_field :user_id, value: current_user.id %>
+                    <%= form.hidden_field :update_status, value: true %>
+
+                    <div class="actions">
+                        <%= form.button "Update Order Status", type: :submit, class: "btn white red-text text-darken-2", style: "margin-bottom: 1rem" %>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+    </section>
+<% end %>
+
+<%= render template: "layouts/pages" %>

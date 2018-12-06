@@ -1,0 +1,63 @@
+<% content_for :page_title do %>
+  Furnitures
+<% end %>
+
+<% content_for :page_header do %>
+  <%= render 'pages/header' %>
+<% end %>
+
+<% content_for :page_content do %>
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://images.pexels.com/photos/545012/pexels-photo-545012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Find your sleep essentials!</h3>
+          <h5 class="light grey-text text-lighten-3">Sleep better with furnish.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://images.pexels.com/photos/707196/pexels-photo-707196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+        <div class="caption center-align">
+          <h3>Boost your study moods</h3>
+          <h5 class="light grey-text text-lighten-3">Study better with furnish.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://images.pexels.com/photos/133919/pexels-photo-133919.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"> 
+        <div class="caption center-align">
+          <h3>Be profesionalls couch potato</h3>
+          <h5 class="light grey-text text-lighten-3">Relax better with furnish.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="container">
+    <% @furnitures.each_slice(4) do |furniture|%>
+      <div class="row">
+        <% furniture.each do |f|%>
+          <div class="col s3">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="https://images.pexels.com/photos/683929/pexels-photo-683929.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"><%= f.name %><i class="material-icons right">more_vert</i></span>
+                <p><a href="#">see details</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">$<%= f.price %><i class="material-icons right">close</i></span>
+                <p><%= f.description %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div> 
+<% end %>
+
+<%= render template: "layouts/pages" %>

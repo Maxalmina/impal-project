@@ -21,6 +21,8 @@
     <%= yield :stylesheets %>
   </head>
   <body>
+    <%= yield :top %>
+
     <%= content_for?(:content) ? yield(:content) : yield %>
 
     <!-- Optional JavaScript -->

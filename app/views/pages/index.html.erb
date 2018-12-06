@@ -1,0 +1,17 @@
+<% content_for :title do %>
+  Welcome
+<% end %>
+
+<% content_for :content do %>
+    <div class="landing-content">
+        <div class="landing-container">
+            <h1 class="landing-heading white-text">
+            <i class="fa fa-home"></i>furnish.
+            </h1>
+            <div class="landing-links-container">
+            <%= link_to "JOIN US!", register_path(), class: "btn waves-effect waves-light light-blue darken-4", id: "register-user" %>
+            <%= link_to "SIGN IN", signin_path, class: "btn waves-effect waves-red white light-blue-text text-darken-4", id: "login" %>
+            </div>
+        </div>
+    </div>
+<% end %>

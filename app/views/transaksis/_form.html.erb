@@ -1,0 +1,48 @@
+<%= form_with(model: transaksi, local: true) do |form| %>
+  <% produsen.furnitures.in_groups_of(3, false) do |furniture|%>
+    <div class="row">
+      <% furniture.each do |f|%>
+        <div class="col s4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="<%= f.image %>">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><%= f.name %><i class="material-icons right">more_vert</i></span>
+              <% if current_user.admin? %>
+                <%= link_to 'Edit', edit_furniture_path(furniture) %> |
+                <%= link_to 'Delete', method: :delete, data: {confirm: 'Are you sure?'} %>
+              <% end %>
+              <% if current_user.customer? %>
+                <input class="transaksi_furniture_quantity" type="number" name="transaksi[furnitures][<%= f.id %>]" value="0" />
+              <% end %>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">$<%= f.price %><i class="material-icons right">close</i></span>
+              <p><%= f.description %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if transaksi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transaksi.errors.count, "error") %> prohibited this transaksi from being saved:</h2>
+
+      <ul>
+      <% transaksi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <%= form.hidden_field :produsen_id, value: produsen.id %>
+  <%= form.hidden_field :user_id, value: current_user.id %>
+  <% if current_user.customer? %>
+    <%= form.button 'Submit', type: :submit, class: "btn red darken-2" %>
+  <% end %>
+  <br><br>
+<% end %>
