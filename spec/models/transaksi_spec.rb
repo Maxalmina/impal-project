@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Transaksi, type: :model do
-<<<<<<< HEAD
     describe "attributes" do
       let(:transaksi) { Transaksi.new }
 
@@ -37,7 +36,4 @@ RSpec.describe Transaksi, type: :model do
         end
       end
   end
-=======
-  pending "add some examples to (or delete) #{__FILE__}"
->>>>>>> 9823e900a136f9d41b5130b29dff120c6660440d
 end
